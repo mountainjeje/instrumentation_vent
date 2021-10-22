@@ -36,7 +36,7 @@ void loop() {
   
   compte++;
   digitalWrite(13, HIGH);
-  delay(1000);
+  delay(0);
   digitalWrite(13, LOW);
-  delay(119000);
+  delay(1000);
 }
