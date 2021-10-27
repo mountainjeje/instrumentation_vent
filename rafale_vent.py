@@ -21,14 +21,14 @@ while True :
     decoded_data = list(data.split(", "))
     
     with open('poubelle.csv', 'a') as datalog:
-    writer = csv.writer(datalog)
-    writer.writerow(decoded_data)
-#Condition qui enregistre les mesures lorsqu'on a un vent supérieur à 10m/s en P0 P1 ou P2, ou lorsqu'on a pas enregistré de mesure depuis 60 secondes
+        writer = csv.writer(datalog)
+        writer.writerow(decoded_data)
+# Condition qui enregistre les mesures lorsqu on a un vent superieur a 10m/s en P0 P1 ou P2 ou lorsqu on a pas enregistre de mesure depuis 60 secondes
     if decoded_data[1]>204 or decoded_data[3]>204 or decoded_data[5]>204 or mesure==60 :
     
         with open('datalog.csv', 'a') as datalog:
-        writer = csv.writer(datalog)
-        writer.writerow(decoded_data)
+            writer = csv.writer(datalog)
+            writer.writerow(decoded_data)
         #print("data was written")
         mesure = 0
     
